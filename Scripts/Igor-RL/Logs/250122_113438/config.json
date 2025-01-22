@@ -1,0 +1,133 @@
+{
+    "train_cfg": {
+        "algorithm": {
+            "clip_param": 0.2,
+            "desired_kl": 0.01,
+            "entropy_coef": 0.01,
+            "gamma": 0.99,
+            "lam": 0.95,
+            "learning_rate": 0.001,
+            "max_grad_norm": 1.0,
+            "num_learning_epochs": 5,
+            "num_mini_batches": 4,
+            "schedule": "adaptive",
+            "use_clipped_value_loss": true,
+            "value_loss_coef": 1.0
+        },
+        "init_member_classes": {},
+        "policy": {
+            "activation": "elu",
+            "actor_hidden_dims": [
+                512,
+                256,
+                128
+            ],
+            "critic_hidden_dims": [
+                512,
+                256,
+                128
+            ],
+            "init_noise_std": 1.0
+        },
+        "runner": {
+            "algorithm_class_name": "PPO",
+            "checkpoint": -1,
+            "experiment_name": "Igor-Turn",
+            "load_run": -1,
+            "log_interval": 1,
+            "max_iterations": 200,
+            "num_steps_per_env": 24,
+            "policy_class_name": "ActorCritic",
+            "record_interval": -1,
+            "resume": false,
+            "resume_path": null,
+            "run_name": "",
+            "runner_class_name": "runner_class_name",
+            "save_interval": 50
+        },
+        "runner_class_name": "OnPolicyRunner",
+        "seed": 1
+    },
+    "env_cfg": {
+        "num_actions": 6,
+        "default_joint_angles": {
+            "L_wheel_joint": 0.0,
+            "R_wheel_joint": 0.0,
+            "L_kfe_joint": -1.0765679639548074,
+            "R_kfe_joint": -1.0765679639548074,
+            "L_hfe_joint": 0.5,
+            "R_hfe_joint": 0.5
+        },
+        "dof_names": [
+            "L_wheel_joint",
+            "R_wheel_joint",
+            "L_kfe_joint",
+            "R_kfe_joint",
+            "L_hfe_joint",
+            "R_hfe_joint"
+        ],
+        "kp": 30.0,
+        "kd": 2.0,
+        "termination_if_roll_greater_than": 60,
+        "termination_if_pitch_greater_than": 60,
+        "base_init_pos": [
+            0.0,
+            0.0,
+            0.77
+        ],
+        "base_init_quat": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "episode_length_s": 20.0,
+        "resampling_time_s": 4.0,
+        "action_scale": [
+            8.8,
+            8.8,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+        ],
+        "simulate_action_latency": true,
+        "clip_actions": 100.0
+    },
+    "obs_cfg": {
+        "num_obs": 27,
+        "obs_scales": {
+            "lin_vel": 1.0,
+            "dof_pos": 1.0,
+            "dof_vel": 1.0,
+            "ang_vel": 1.0
+        }
+    },
+    "reward_cfg": {
+        "tracking_sigma": 0.25,
+        "base_height_target": 0.7660865336331426,
+        "reward_scales": {
+            "tracking_lin_vel": 0.06,
+            "tracking_ang_vel": 0.06,
+            "lin_vel_z": -0.02,
+            "action_rate": -0.0001,
+            "similar_to_default": -0.002,
+            "leg_energy": -2e-05
+        }
+    },
+    "command_cfg": {
+        "num_commands": 3,
+        "lin_vel_x_range": [
+            0.0,
+            0.0
+        ],
+        "lin_vel_y_range": [
+            0.0,
+            0.0
+        ],
+        "ang_vel_range": [
+            0.5,
+            0.5
+        ]
+    }
+}
