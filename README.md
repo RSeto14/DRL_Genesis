@@ -43,7 +43,7 @@ pip install PyYAML
 
 ## 3. Igor
 
-### [Env.py](Scripts/Igor-RL/Env.py)
+### [Scripts/Igor-RL/Env.py](Scripts/Igor-RL/Env.py)
 
 - 強化学習の環境を定義しているファイル
 - 実行すると↓のように環境のテストを行い，動画を生成する
@@ -55,7 +55,7 @@ python Scripts/Igor-RL/Env.py
 <video src="./Scripts/Igor-RL/env_video.mp4" controls></video>
 
 
-### [Train.py](Scripts/Igor-RL/Train.py)
+### [Scripts/Igor-RL/Train.py](Scripts/Igor-RL/Train.py)
 
 - 学習を行うファイル
 - 実行するとLogsフォルダに学習ログが保存される
@@ -92,7 +92,7 @@ Mean episode rew_similar_to_default: -0.2022
                                ETA: 0.5s
 ```
 
-### [Eval.py](Scripts/Igor-RL/Eval.py)
+### [Scripts/Igor-RL/Eval.py](Scripts/Igor-RL/Eval.py)
 
 - 学習したモデルを評価するファイル
 - 実行するとLogsフォルダに動画が保存される
