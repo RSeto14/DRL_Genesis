@@ -52,7 +52,7 @@ pip install PyYAML
 python Scripts/Igor-RL/Env.py
 ```
 
-<video src="./Scripts/Igor-RL/env_video.mp4" controls></video>
+[env_video.mp4](./Scripts/Igor-RL/env_video.mp4)
 
 
 ### [Scripts/Igor-RL/Train.py](Scripts/Igor-RL/Train.py)
@@ -107,4 +107,4 @@ python Scripts/Igor-RL/Eval.py
 python Scripts/Igor-RL/Eval.py --log_dir Scripts/Igor-RL/Logs/250122_113438
 ```
 
-<video src="./Scripts/Igor-RL/Logs/250122_113438/Test/250122_115822/video.mp4" controls></video>
+[video.mp4](./Scripts/Igor-RL/Logs/250122_113438/Test/250122_115822/video.mp4)
